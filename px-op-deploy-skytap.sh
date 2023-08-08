@@ -36,7 +36,7 @@ sleep 5
 
 
 echo " Step 3. Install PX Operator and check if the POD is running:"
-kubectl apply -f 'https://install.portworx.com/2.13?comp=pxoperator&kbver=1.21.3&ns=portworx'
+kubectl apply -f 'https://install.portworx.com/2.13?comp=pxoperator&kbver=1.27.4&ns=portworx'
 while true; do
     NUM_READY=`kubectl get pods -n portworx -o wide | grep portworx-operator | grep Running | wc -l`
     if [ "${NUM_READY}" == "1" ]; then
